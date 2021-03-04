@@ -8,30 +8,15 @@ namespace RetrieveDataFromFile
     class FileProg
     {
         public static void Do()
-        {
-
+        { 
             WriteLine();
             ReadLine();
-            
-
-
         }
-
-
-
 
         private static void WriteLine()
         {
             string dir = Directory.GetCurrentDirectory();
             string filename = dir + "\\dataLine.txt";
-            if (File.Exists(filename))
-            {
-                Console.WriteLine("File exists");
-            }
-            else
-            {
-                Console.WriteLine("File doesn't exist");
-            }
 
             StreamWriter wrt = File.CreateText(filename);
             wrt.WriteLine("Ruchika,ETC");
@@ -43,7 +28,7 @@ namespace RetrieveDataFromFile
             wrt.WriteLine("Kishwar,IT");
 
             wrt.Close();
-            Console.WriteLine("Content lines have been added into file");
+            Console.WriteLine("*****Content lines have been added into file*****");
 
         }
 
@@ -53,7 +38,6 @@ namespace RetrieveDataFromFile
             string filename = dir + "\\dataLine.txt";
             if (File.Exists(filename))
             {
-                Console.WriteLine("File exists");
                 string[] contents = File.ReadAllLines(filename);
                 Console.WriteLine("*****Displaying contents in the file*****");
                 Print(contents);
@@ -70,7 +54,7 @@ namespace RetrieveDataFromFile
             string filename = dir + "\\dataLine.txt";
             if (File.Exists(filename))
             {
-                Console.WriteLine("File exists");
+               
                 string[] contents = File.ReadAllLines(filename);
                 Console.WriteLine("*****Sorting contents in the file by name*****");
                 string temp;
@@ -104,7 +88,7 @@ namespace RetrieveDataFromFile
             string filename = dir + "\\dataLine.txt";
             if (File.Exists(filename))
             {
-                Console.WriteLine("File exists");
+               
                 string[] contents = File.ReadAllLines(filename);
  
                 int flag = 0;
@@ -134,7 +118,7 @@ namespace RetrieveDataFromFile
                 if(flag==0)
                 {
                     
-                        Console.WriteLine("no data found corresponding to the name !");
+                        Console.WriteLine("no data found corresponding to the Name!");
                     
                 }
             }
